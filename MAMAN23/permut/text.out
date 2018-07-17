@@ -1,0 +1,36 @@
+###################################################################
+Testing data1.in file for word "amo"
+amo
+mao
+amo
+3 permutation instances of amo found in data1.in.
+###################################################################
+Testing data2.in file for word "chair"
+chair
+arich
+hairc
+arich
+4 permutation instances of chair found in data2.in.
+###################################################################
+Testing data3.in file for word "room"
+room
+moor
+romo
+orom
+room
+5 permutation instances of room found in data3.in.
+###################################################################
+Testing data4.in file for word "dog"
+dog
+odg
+gdo
+god
+4 permutation instances of dog found in data4.in.
+###################################################################
+Testing data5.in file for word "dog"
+###################################################################
+Testing data6.in file for word "garlic"
+Sorry, No permutations of garlic found in data6.in.
+###################################################################
+Testing data7.in file for word "garlic"
+###################################################################

@@ -1,0 +1,2 @@
+myset.o: myset.c set.h
+set.o: set.c set.h

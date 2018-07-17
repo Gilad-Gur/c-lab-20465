@@ -1,0 +1,179 @@
+Well hello there, and welcome to SET OPERATIONS.
+Let's play around with sets and a few operations on them.
+1. Valid set names only: SETA, SETB, SETC, SETD, SETE, SETF.
+2. Valid opertaions only: read_set, print_set, union_set, intersect_set, sub_set.
+3. Valid range of numbers: 0-127 inc.
+4. To perform read_set, input as follows:
+read_set <setname>,<number>,...,<number>,-1 <ENTER>
+Example: read_set SETA, 12, 13 ,14 ,-1
+5. To perform print_set, input as follows:
+print_set <setname><ENTER>
+Example: print_set SETA
+6. To perform union/intersect/sub_set, input as follows:
+<operation> <setname1>,<setname2>,<setname3><ENTER>
+Example: intersect_set SETB, SETF, SETD
+NOTE: the same set can be used twice or 3 times in uni/inter/sub operations.
+7. To quit: stop<ENTER>
+
+
+~prompt: 
+input:    ,	 read_set  	 	SETA, 13   ,   15,   13,  -1       
+output: Undefined command name
+
+
+~prompt: 
+input:   	 	 	read,set 	 	 SETA,12,-1
+output: Undefined command name
+
+
+~prompt: 
+input:  read_set 	 	,  	 	SETA, 13, 15 ,13,14 ,   	-1
+output: Illegal comma
+
+
+~prompt: 
+input:  read_set, SETA,12,-1
+output: Illegal comma
+
+
+~prompt: 
+input:  read_set ,SETA,12,-1
+output: Illegal comma
+
+
+~prompt: 
+input:  read_set SETG,12,13,-1
+output: Undefined set name
+
+
+~prompt: 
+input:  read_set SETA,  	 	,12,13,-1
+output: Multiple consecutive comma
+
+
+~prompt: 
+input:  read_set SETA , 12, ,13, -1
+output: Multiple consecutive comma
+
+
+~prompt: 
+input:  read_set SETA, 12, -1,
+output: Extraneous text after end of command
+
+
+~prompt: 
+input:  read_set SETA, 12,13
+output: List of set members is not terminated correctly
+
+
+~prompt: 
+input:  read_set SETA, 12,13.0,14,-1
+output: Invalid set member - not an integer
+
+
+~prompt: 
+input:  read_set SETA ,12 ,13, xyz, -1
+output: Invalid set member - not an integer
+
+
+~prompt: 
+input:  read_set SETA 13, -1
+output: Missing comma
+
+
+~prompt: 
+input:  read_set SETA, 14,13 15,-1
+output: Missing comma
+
+
+~prompt: 
+input:  read_set SETA, 14, -2, 37,-1
+output: Invalid set member - value out of range
+
+
+~prompt: 
+input:  read_set SETA, 14, 128, 0, -1
+output: Invalid set member - value out of range
+
+
+~prompt: 
+input:  read_set SETA, 45, 23, 6, 7, 4, 3, 75 ,45, 34,
+output: List of set members is not terminated correctly
+
+
+~prompt: 
+input:  read_set SETB, 5, 4, 3, 2, 78, 45, 43, -1,2
+output: Extraneous text after end of command
+
+
+~prompt: 
+input:  read_set SETC,100,105,101,103 104,-1
+output: Missing comma
+
+
+~prompt: 
+input:  read_set SETX,100,105,101,103 104,-1
+output: Undefined set name
+
+
+~prompt: 
+input:  read_set SETB, 5, 4, -3, 2, 78, 45, 43, -1,2
+output: Invalid set member - value out of range
+
+
+~prompt: 
+input:  read_set SETE, 5, 4, 3, 2, 78, 45, 4.3, -1,2
+output: Invalid set member - not an integer
+
+
+~prompt: 
+input:  print_set SETA ,
+output: Extraneous text after end of command
+
+
+~prompt: 
+input:  print_set ,SETB
+output: Illegal comma
+
+
+~prompt: 
+input:  print_set
+output: Missing parameter
+
+
+~prompt: 
+input:  union_set SETA SETB, SETD
+output: Missing comma
+
+
+~prompt: 
+input:  intersect_set SETA, SETB SETE
+output: Missing comma
+
+
+~prompt: 
+input:  sub_set SETA, SETB, , SETF
+output: Multiple consecutive comma
+
+
+~prompt: 
+input:  intersect_set SETA, SETC,
+output: Missing parameter
+
+
+~prompt: 
+input:  intersect_set
+output: Missing parameter
+
+
+~prompt: 
+input:  do_set SETA, -1
+output: Undefined command name
+
+
+~prompt: 
+input:  stop 23
+output: Extraneous text after end of command
+
+
+~prompt: Error: no 'stop' command at EOF redirection.

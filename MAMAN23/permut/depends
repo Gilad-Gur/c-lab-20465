@@ -1,0 +1,2 @@
+permut.o: permut.c utility.h
+utility.o: utility.c utility.h

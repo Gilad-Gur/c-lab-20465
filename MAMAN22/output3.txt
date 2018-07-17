@@ -1,0 +1,109 @@
+Well hello there, and welcome to SET OPERATIONS.
+Let's play around with sets and a few operations on them.
+1. Valid set names only: SETA, SETB, SETC, SETD, SETE, SETF.
+2. Valid opertaions only: read_set, print_set, union_set, intersect_set, sub_set.
+3. Valid range of numbers: 0-127 inc.
+4. To perform read_set, input as follows:
+read_set <setname>,<number>,...,<number>,-1 <ENTER>
+Example: read_set SETA, 12, 13 ,14 ,-1
+5. To perform print_set, input as follows:
+print_set <setname><ENTER>
+Example: print_set SETA
+6. To perform union/intersect/sub_set, input as follows:
+<operation> <setname1>,<setname2>,<setname3><ENTER>
+Example: intersect_set SETB, SETF, SETD
+NOTE: the same set can be used twice or 3 times in uni/inter/sub operations.
+7. To quit: stop<ENTER>
+
+
+~prompt: 
+input:  read_set SETA,1,2,-1
+output: Done!
+
+
+~prompt: 
+input:  print_set SETA
+output: SETA:  1  2 
+
+
+~prompt: 
+input:  read_set SETB,3,4,-1
+output: Done!
+
+
+~prompt: 
+input:  print_set SETB
+output: SETB:  3  4 
+
+
+~prompt: 
+input:  union_set SETA,SETB,SETC
+output: Done!
+
+
+~prompt: 
+input:  print_set SETC
+output: SETC:  1  2  3  4 
+
+
+~prompt: 
+input:  read_set SETD,17,18,19,-1
+output: Done!
+
+
+~prompt: 
+input:  print_set SETD
+output: SETD:  17  18  19 
+
+
+~prompt: 
+input:  read_set SETE,18,19,20,21,-1
+output: Done!
+
+
+~prompt: 
+input:  print_set SETE
+output: SETE:  18  19  20  21 
+
+
+~prompt: 
+input:  intersect_set SETD,SETE,SETF
+output: Done!
+
+
+~prompt: 
+input:  print_set SETF
+output: SETF:  18  19 
+
+
+~prompt: 
+input:  read_set SETA,7,8,9,-1
+output: Done!
+
+
+~prompt: 
+input:  print_set SETA
+output: SETA:  7  8  9 
+
+
+~prompt: 
+input:  read_set SETB,8,-1
+output: Done!
+
+
+~prompt: 
+input:  print_set SETB
+output: SETB:  8 
+
+
+~prompt: 
+input:  sub_set SETA,SETB,SETC
+output: Done!
+
+
+~prompt: 
+input:  print_set SETC
+output: SETC:  7  9 
+
+
+~prompt: Error: no 'stop' command at EOF redirection.
